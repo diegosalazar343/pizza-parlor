@@ -48,6 +48,10 @@ Pizza.prototype.cost = function(){
 $(document).ready(function() {
   $("form#pizza-submit").submit(function(event){
     event.preventDefault();
+
+    let size = $("#size").val();
+    let meatToppings = $("#meatToppings").val();
+    let veggieToppings = $("#veggieToppings").val();
     $("#order").text(`Hey ! your pizza order is    and will cost   dollars`)
   });
 });
