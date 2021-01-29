@@ -12,23 +12,26 @@
     <h1>Diego's Pretty Pizza</h1>
     <p>If you like really good pizza you might like this place. come in and enjoy the most reasonably priced pizza in town!</p>
     <form id="pizza-submit">
-      <select class="form-control" id="size">
+      <select class="form-group" id="size">
         <option>- Select your size-</option>
         <option value="2">Small</option>
         <option value="3">Medium</option>
         <option value="4">Large</option>
         <option value="5">Extra-Large</option>
       </select>
-      <select class="form-control" id="meat-toppings">
-        <input type="checkbox" name="meat" value="1">Chicken
+      <div class="form-group" id="meat-toppings">
+        <p>Please select your meat toppings below!</p>
+        <input type="checkbox" name="meat" value="7">Chicken
         <input type="checkbox" name="meat" value="1">Sausage
         <input type="checkbox" name="meat" value="1">Pepperoni
         <input type="checkbox" name="meat" value="2">Bacon
         <input type="checkbox" name="meat" value="1">Ham
         <input type="checkbox" name="meat" value="5">Anchovies
         <input type="checkbox" name="meat" value="4">Shredded Pork
-      </select>
-      <select class="form-control" id="veggie-toppings">
+      </div>
+      <br>
+      <div class="form-group" id="veggie-toppings">
+        <p>Please select your veggie toppings below!</p>
         <input type="checkbox" name="veggies" value="3">Extra cheese
         <input type="checkbox" name="veggies" value="1">Red peppers
         <input type="checkbox" name="veggies" value="1">Banana Peppers
@@ -40,8 +43,8 @@
         <input type="checkbox" name="veggies" value="1">Green pepper
         <input type="checkbox" name="veggies" value="1">Jalapenos
         <input type="checkbox" name="veggies" value="15">Pineapple
-      </select>
-      <button class="btn">Pizza</button>
+      </div>
+      <button class="btn">Submit</button>
     </form>
     <div id="order">
 
