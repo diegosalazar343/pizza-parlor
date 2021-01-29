@@ -30,6 +30,8 @@ Pizza.prototype.cost = function(){
     this.pizzaPrice += 5;
   } else if (this.meatToppings = 1){
     this.pizzaPrice += 1;
+  } else if (this.meatToppings === 7) {
+    this.pizzaPrice += 7;
   };
   if(this.veggieToppings = 1) {
     this.pizzaPrice += 1;
@@ -42,3 +44,10 @@ Pizza.prototype.cost = function(){
   }
   return this.pizzaPrice;
 }
+
+$(document).ready(function() {
+  $("form#pizza-submit").submit(function(event){
+    event.preventDefault();
+    $("#order").text(`Hey ! your pizza order is    and will cost   dollars`)
+  });
+});
