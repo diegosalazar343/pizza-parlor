@@ -13,51 +13,48 @@ function Pizza(size, meatToppings, veggieToppings) {
 
 Pizza.prototype.cost = function(){
 
-  if(this.size === 2) {
+  if(this.size === "small") {
     this.pizzaPrice += 2;
-  } else if(this.size === 3){
+  } else if(this.size === "medium"){
     this.pizzaPrice +=3;
-  } else if (this.size === 4) {
+  } else if (this.size === "large") {
     this.pizzaPrice += 4;
-  } else if (this.size === 5) {
+  } else if (this.size === "extra-large") {
     this.pizzaPrice +=5;
-  }
-  if(this.meatToppings === 2){
+  };
+  if(this.meatToppings === "2"){
     this.pizzaPrice += 2;
-  } else if (this.meatToppings === 4){
+  } else if (this.meatToppings === "4"){
     this.pizzaPrice += 4;
-  } else if (this.meatToppings === 5) {
+  } else if (this.meatToppings === "5") {
     this.pizzaPrice += 5;
-  } else if (this.meatToppings = 1){
+  } else if (this.meatToppings = "1"){
     this.pizzaPrice += 1;
-  } else if (this.meatToppings === 7) {
+  } else if (this.meatToppings === "7") {
     this.pizzaPrice += 7;
   }
-  if(this.veggieToppings = 1) {
+  if(this.veggieToppings === "1") {
     this.pizzaPrice += 1;
-  } else if(this.veggieToppings = 2) {
+  } else if(this.veggieToppings === "2") {
     this.pizzaPrice += 2;
-  } else if (this.veggieToppings = 3){
+  } else if (this.veggieToppings === "3"){
     this.pizzaPrice +=3;
-  } else if (this.veggieToppings = 15){
+  } else if (this.veggieToppings === "15"){
     this.pizzaPrice +=15;
   }
   return this.pizzaPrice;
-  console.log(pizzaPrice);
 }
-/*Pizza.prototype.fullOrder = function() {
-  return this.size + this.meatToppings + this.veggieToppings;
-}*/
+
 
 $(document).ready(function() {
   $("form#pizza-submit").submit(function(event){
     event.preventDefault();
 
-    let size = $("#size").val();
+    const size = $("#size:selected").text();
     let meatToppings = $("input:checkbox[name=meat]:checked");
     let veggieToppings = $("input:checkbox[name=veggies]:checked");
 
-    let newPizza = new Pizza(size, meatToppings, veggieToppings);
-    $("#order").text(`Hey your pizza order is ${newPizza} and will cost ${newPizza.pizzaPrice}.00`);
+    newPizza = new Pizza(size, meatToppings, veggieToppings, this.pizzaPrice);
+    $("#order").text('Hey your order comes out to be $' + newPizza.pizzPrice + '.00');
   });
 });
