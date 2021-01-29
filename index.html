@@ -14,27 +14,38 @@
     <form id="pizza-submit">
       <select class="form-control" id="size">
         <option>- Select your size-</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-        <option value="extra-large">Extra-Large</option>
+        <option value="2">Small</option>
+        <option value="3">Medium</option>
+        <option value="4">Large</option>
+        <option value="5">Extra-Large</option>
       </select>
-      <select class="form-control" id="toppings">
-        <option>- Select your toppings-</option>
-        <option value="">Chicken</option>
-        <option value="">Sausage</option>
-        <option value="">Pepperoni</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+      <select class="form-control" id="meat-toppings">
+        <input type="checkbox" name="meat" value="1">Chicken
+        <input type="checkbox" name="meat" value="1">Sausage
+        <input type="checkbox" name="meat" value="1">Pepperoni
+        <input type="checkbox" name="meat" value="2">Bacon
+        <input type="checkbox" name="meat" value="1">Ham
+        <input type="checkbox" name="meat" value="5">Anchovies
+        <input type="checkbox" name="meat" value="4">Shredded Pork
       </select>
+      <select class="form-control" id="veggie-toppings">
+        <input type="checkbox" name="veggies" value="3">Extra cheese
+        <input type="checkbox" name="veggies" value="1">Red peppers
+        <input type="checkbox" name="veggies" value="1">Banana Peppers
+        <input type="checkbox" name="veggies" value="1">Onions
+        <input type="checkbox" name="veggies" value="2">Tomatoes
+        <input type="checkbox" name="veggies" value="1">Spinach
+        <input type="checkbox" name="veggies" value="1">Mushrooms
+        <input type="checkbox" name="veggies" value="1">Black olives
+        <input type="checkbox" name="veggies" value="1">Green pepper
+        <input type="checkbox" name="veggies" value="1">Jalapenos
+        <input type="checkbox" name="veggies" value="15">Pineapple
+      </select>
+      <button class="btn">Pizza</button>
     </form>
+    <div id="order">
+
+    </div>
   </div>
 
 </body>
