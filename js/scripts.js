@@ -9,3 +9,18 @@ function Pizza(size, meatToppings, veggieToppings) {
   this.veggieToppings = veggieToppings;
   this.pizzaPrice = 4;
 }
+
+
+Pizza.prototype.cost = function(){
+
+  if(this.size = "small") {
+    this.pizzaPrice += 2;
+  } else if(this.size ="medium"){
+    this.pizzaPrice +=3;
+  } else if (this.size = "large") {
+    this.pizzaPrice += 4;
+  } else {
+    this.pizzaPrice +=5;
+  }
+
+}
