@@ -52,6 +52,11 @@ $(document).ready(function() {
     let size = $("#size").val();
     let meatToppings = $("#meatToppings").val();
     let veggieToppings = $("#veggieToppings").val();
+
+    let newPizza = new Pizza(size, meatToppings, veggieToppings);
+    console.log(newPizza);
+    newPizza.pizzaPrice()
+    console.log(newPizza.pizzaPrice);
     $("#order").text(`Hey ! your pizza order is    and will cost   dollars`)
   });
 });
