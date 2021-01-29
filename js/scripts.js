@@ -21,7 +21,7 @@ Pizza.prototype.cost = function(){
     this.pizzaPrice += 4;
   } else if (this.size === 5) {
     this.pizzaPrice +=5;
-  };
+  }
   if(this.meatToppings === 2){
     this.pizzaPrice += 2;
   } else if (this.meatToppings === 4){
@@ -32,7 +32,7 @@ Pizza.prototype.cost = function(){
     this.pizzaPrice += 1;
   } else if (this.meatToppings === 7) {
     this.pizzaPrice += 7;
-  };
+  }
   if(this.veggieToppings = 1) {
     this.pizzaPrice += 1;
   } else if(this.veggieToppings = 2) {
@@ -43,20 +43,21 @@ Pizza.prototype.cost = function(){
     this.pizzaPrice +=15;
   }
   return this.pizzaPrice;
+  console.log(pizzaPrice);
 }
+/*Pizza.prototype.fullOrder = function() {
+  return this.size + this.meatToppings + this.veggieToppings;
+}*/
 
 $(document).ready(function() {
   $("form#pizza-submit").submit(function(event){
     event.preventDefault();
 
     let size = $("#size").val();
-    let meatToppings = $("#meatToppings").val();
-    let veggieToppings = $("#veggieToppings").val();
+    let meatToppings = $("input:checkbox[name=meat]:checked");
+    let veggieToppings = $("input:checkbox[name=veggies]:checked");
 
     let newPizza = new Pizza(size, meatToppings, veggieToppings);
-    console.log(newPizza);
-    newPizza.pizzaPrice()
-    console.log(newPizza.pizzaPrice);
-    $("#order").text(`Hey ! your pizza order is    and will cost   dollars`)
+    $("#order").text(`Hey your pizza order is ${newPizza} and will cost ${newPizza.pizzaPrice}.00`);
   });
 });
