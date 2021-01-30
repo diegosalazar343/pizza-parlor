@@ -21,26 +21,16 @@ Pizza.prototype.cost = function() {
   } else if (this.size === "extra-large"){
     this.pizzaPrice += 5;
   };
-  if(this.meatToppings === 1) {
-    this.pizzaPrice += 1;
-  } else if (this.meatToppings === 2) {
+  if (this.meatToppings.length >= 1 && this.meatToppings.length <=3) {
     this.pizzaPrice += 2;
-  } else if (this.meatToppings === 4) {
-    this.pizzaPrice += 4;
-  } else if (this.meatToppings=== 5) {
-    this.pizzaPrice += 5;
-  } else if (this.meatToppings === 7) {
-    this.pizzaPrice += 7;
+  } else if (this.meatToppings.length >= 4 && this.meatToppings.length <= 7) {
+    this.pizzaPrice += 6;
   };
-  if(this.veggieToppings === 1) {
-    this.pizzaPrice += 1;
-  } else if(this.veggieToppings === 2) {
-    this.pizzaPrice += 2;
-  } else if (this.veggieToppings === 3){
-    this.pizzaPrice += 3;
-  } else if (this.veggieToppings === 15) {
-    this.pizzaPrice += 15;
-  }
+  if (this.veggieToppings.length >= 1 && this.veggieToppings.length <= 5) {
+    this.pizzaPrice += 4;
+  } else if (this.veggieToppings.length >= 6 && this.veggieToppings.length <= 11) {
+    this.pizzaPrice += 9;
+  };
 };
 
 
