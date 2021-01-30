@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 25px;
+}
+
+body {
+  background: rgb(247,227,142);
+  background: linear-gradient(214deg, rgba(247,227,142,1) 5%, rgba(255,74,19,1) 35%, rgba(247,227,142,1) 74%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
